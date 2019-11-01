@@ -1,0 +1,14 @@
+Project Statement:
+
+Given a twitter ID, get a minimum of 100 followers (Modified this to keep in Azure function 5-10 min timeout period) and for each follower gather upto 200 tweets
+Store the tuple (twitterID,followerID,tweetID,tweet) into a table managed in Azure Sql Service.
+1) You will have to create and setup a free Azure account.
+2) Create a database, and a table in that Azure account.
+3) Create a twitter account with API 
+4). given twitter ID, gather follower ids of that twitter ID
+4.1) for each of the follower ID gather upto 200 original tweets 
+--- exclude retweets, messages 
+5) Store that into the Azure table
+6) Write a client to query that Azure table.
+6.1) List all tweets for a given twitter ID
+6.2) List follower ID for a given twitter ID

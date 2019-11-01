@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/Users/karanwadhwa/anaconda3/envs/bigdata/bin/python",
+    "azureFunctions.deploySubpath": "MyFunctionProj",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~2"
+}

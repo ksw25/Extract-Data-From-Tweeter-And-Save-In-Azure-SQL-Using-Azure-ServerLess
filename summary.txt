@@ -1,0 +1,47 @@
+Project Success Report:
+The goal of the project was achieved.
+
+Technology Used:
+	1.	Python
+	2.	Twython library to extract tweeter data
+	3.	Azure Function
+	4.	Azure SQL server
+
+Things I learned:
+	1.	Azure SQL Server Usage from localhost as well as Azure Server-less and Azure Databricks.
+	2.	Azure Function.
+	3.	Learned twython library usage to extract tweets .
+ 
+Brief Summary of steps followed while doing the project:
+	1.	Created a Tweeter Developer Account.
+	2.	Wrote a python script to extract the Follower's ID for a given User ID.
+	3.	Wrote a python script the take Followers ID extracted in the previous step and retrieve at max 200 tweets for each. 
+	4.	Created an Azure SQL database.
+	5.	Wrote a python script to take the result from step 3 and save it to the Azure SQL server.
+	6.	Created an Azure function project and func. Modify script to work on Azure Function.
+Note: I have to reduce the number of tweets extracted from 1000 users to 100 users. Because Azure Function runs at max for 5-10 mins for the student subscription, so to fit that duration, I Had to reduce the number. Everything works the same, just the number of users for which tweets where retrieved were reduced to 100.
+	7.	Create 2 More Client functions for the following purpose.
+	◦	List all tweets for a given twitter ID
+	◦	List follower ID for a given twitter ID
+ 
+Links for each Function:
+	
+	Task 1: To save Followers' ID and their Respective Tweets.(Placed in TweetWork in MyFunctionProj Directory)
+	◦	https://client1bigdata.azurewebsites.net/api/TweetWork
+	◦	for example https://client1bigdata.azurewebsites.net/api/TweetWork?name=25073877
+	
+	Task 2: List all tweets for a given twitter ID. (Placed in Client1BigData in MyFunctionProj Directory)
+	◦	https://client1bigdata.azurewebsites.net/api/Client1BigData?code=NyhLElXnjBz08QButk1jkba27SMqi8hcuvYLVdJE9vAKnX09CN1vrg==
+	◦	for example https://client1bigdata.azurewebsites.net/api/Client1BigData?code=NyhLElXnjBz08QButk1jkba27SMqi8hcuvYLVdJE9vAKnX09CN1vrg==&name=979178022367461376
+	
+	Task 3: List follower ID for a given twitter ID. (Placed in Client2BigData in MyFunctionProj Directory)
+	◦	https://client1bigdata.azurewebsites.net/api/Client1BigData?code=NyhLElXnjBz08QButk1jkba27SMqi8hcuvYLVdJE9vAKnX09CN1vrg==
+	◦	for example https://client1bigdata.azurewebsites.net/api/client2bigdata?code=2MO/r/Wvk5JQFsbQ1KKkA0hdWF1OCfdOemeyZjpENpoNkVGIS57Waw==&name=25073877
+ 
+Challenges Faced:
+	◦	Azure Functions has its limitation as compared to AWS lambda. When I started writing it, I thought it would be the same as AWS lambda as both are serverless, but implementing it was way hard for two reasons. First, Azure function does not allow online code editing, which is provided by AWS. Second, Debugging on the localhost was not working for me, so I had to push code online every-time and see if it works or not, then go offline change and do the same.
+
+
+Follow up:
+	◦	If I was making this for a company and had enough resources, I would have gone with Azure function Dedicated App Plan which have maximum time limit of 30 mins.
+
